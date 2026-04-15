@@ -10,19 +10,8 @@ export default function CreateArticlePage() {
       <Navbar />
 
       <div className="max-w-6xl mx-auto p-8">
-        <div className="mb-6">
-          <h2 className="text-3xl font-bold mb-6">
-            Existing Articles
-          </h2>
-
-          <ArticleList
-            articles={articles}
-            showEdit={true}
-          />
-        </div>
-
-        <div className="flex items-center justify-between mb-6 mt-12">
-          <h1 className="text-4xl font-bold">Create a New Article</h1>
+        <div className="flex items-center justify-between mb-6">
+          <h1 className="text-4xl font-bold">Create Article</h1>
 
           <Link
             href="/articles/view"
@@ -34,7 +23,16 @@ export default function CreateArticlePage() {
 
         <ArticleForm />
 
-        
+        <div className="mt-12">
+          <h2 className="text-3xl font-bold mb-6">
+            Existing Articles
+          </h2>
+
+          <ArticleList
+            articles={articles}
+            showEdit={true}
+          />
+        </div>
       </div>
     </div>
   );
