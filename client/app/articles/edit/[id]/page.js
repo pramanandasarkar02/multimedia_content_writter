@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Navbar from "@/app/components/Navbar";
 import Link from "next/link";
-import { articles } from "@/app/data/articles";
+import { getArticles } from "@/app/lib/getArticles";
 
 export default function EditArticlePage() {
   const params = useParams();
@@ -12,26 +12,33 @@ export default function EditArticlePage() {
 
   const articleId = Number(params.id);
 
-  const article = articles.find(
-    (item) => item.id === articleId
-  );
+  const [article, setArticle] = useState(null);
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
 
-  const [title, setTitle] = useState(article?.title || "");
-  const [content, setContent] = useState(article?.content || "");
+  useEffect(() => {
+    async function load() {
+      const articles = await getArticles();
+      const found = articles.find((a) => a.id === articleId);
+
+      setArticle(found);
+      setTitle(found?.title || "");
+      setContent(found?.content || "");
+    }
+
+    load();
+  }, [articleId]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const updatedArticle = {
+    console.log({
       id: articleId,
       title,
       content,
-    };
-
-    console.log("Updated Article:", updatedArticle);
+    });
 
     alert("Article updated successfully");
-
     router.push("/articles/view");
   };
 
@@ -51,10 +58,7 @@ export default function EditArticlePage() {
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-4xl font-bold">Edit Article</h1>
 
-          <Link
-            href="/articles/create"
-            className="text-blue-500 hover:underline"
-          >
+          <Link href="/articles/create" className="text-blue-500 hover:underline">
             Back
           </Link>
         </div>
@@ -63,32 +67,21 @@ export default function EditArticlePage() {
           onSubmit={handleSubmit}
           className="bg-white p-6 rounded-xl shadow flex flex-col gap-4"
         >
-          <div>
-            <label className="block mb-2 font-medium">
-              Article Title
-            </label>
-            <input
-              type="text"
-              className="w-full border rounded-lg px-4 py-3"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-            />
-          </div>
+          <input
+            className="border px-4 py-3 rounded-lg"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
 
-          <div>
-            <label className="block mb-2 font-medium">
-              Article Content
-            </label>
-            <textarea
-              className="w-full border rounded-lg px-4 py-3 min-h-[250px]"
-              value={content}
-              onChange={(e) => setContent(e.target.value)}
-            />
-          </div>
+          <textarea
+            className="border px-4 py-3 rounded-lg min-h-[250px]"
+            value={content}
+            onChange={(e) => setContent(e.target.value)}
+          />
 
           <button
             type="submit"
-            className="bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600"
+            className="bg-orange-500 text-white py-3 rounded-lg"
           >
             Update Article
           </button>

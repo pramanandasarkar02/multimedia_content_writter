@@ -5,9 +5,9 @@ export default function ArticleCard({ article, showEdit = false }) {
     <div className="bg-white p-5 rounded-xl shadow border">
       <h2 className="text-2xl font-semibold">{article.title}</h2>
 
-      <p className="text-gray-600 mt-2">
+      {/* <p className="text-gray-600 mt-2">
         {article.content.slice(0, 100)}...
-      </p>
+      </p> */}
 
       <div className="flex gap-4 mt-4">
         <Link

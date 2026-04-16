@@ -1,10 +1,15 @@
 import Navbar from "../components/Navbar";
 import ArticleCard from "../components/ArticleCard";
 import AddArticleForm from "../components/ArticleForm";
-import { articles } from "../data/articles";
+import { getArticles } from "@/app/lib/getArticles";
 
-export default function ArticlesPage({ searchParams }) {
+
+
+
+export default async function ArticlesPage({ searchParams }) {
   const role = searchParams.role || "reader";
+
+  const articles = await getArticles();
 
   return (
     <div className="min-h-screen bg-gray-50">

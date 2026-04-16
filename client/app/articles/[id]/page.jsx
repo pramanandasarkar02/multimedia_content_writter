@@ -1,13 +1,11 @@
 import Navbar from "@/app/components/Navbar";
 import Link from "next/link";
-import { articles } from "@/app/data/articles";
+import { getArticleById } from "@/app/lib/getArticles";
 
 export default async function SingleArticlePage({ params }) {
   const { id } = await params;
 
-  const article = articles.find(
-    (item) => item.id === Number(id)
-  );
+  const article = await getArticleById(id);
 
   if (!article) {
     return (
@@ -19,24 +17,21 @@ export default async function SingleArticlePage({ params }) {
 
   return (
     <div className="min-h-screen">
-      <Navbar />
+  <Navbar />
 
-      <div className="max-w-4xl mx-auto p-8">
-        <div className="bg-white p-8 rounded-2xl shadow">
-          <Link
-            href="/articles/view"
-            className="text-blue-500 hover:underline"
-          >
-            ← Back to Articles
-          </Link>
-
-          <h1 className="text-4xl font-bold mt-6">{article.title}</h1>
-
-          <div className="mt-8 text-gray-700 leading-8 text-lg whitespace-pre-line">
-            {article.content}
-          </div>
-        </div>
+  <div className="min-h-screen flex justify-center px-4 py-10">
+    <div className="w-full max-w-4xl">
+      <div className="bg-white p-8 rounded-2xl shadow">
+        <Link href="/articles/view" className="text-blue-500 hover:underline">
+          ← Back to Articles
+        </Link>
+        <div
+          className="mt-8 prose max-w-none"
+          dangerouslySetInnerHTML={{ __html: article.content }}
+        />
       </div>
     </div>
+  </div>
+</div>
   );
 }

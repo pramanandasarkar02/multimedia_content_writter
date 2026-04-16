@@ -1,8 +1,10 @@
 import Navbar from "@/app/components/Navbar";
 import ArticleList from "@/app/components/ArticleList";
-import { articles } from "@/app/data/articles";
+import { getArticles } from "@/app/lib/getArticles";
 
-export default function ViewArticlesPage() {
+export default async function ViewArticlesPage() {
+  const articles = await getArticles();
+
   return (
     <div className="min-h-screen">
       <Navbar />

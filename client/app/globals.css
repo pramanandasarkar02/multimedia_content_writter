@@ -6,3 +6,32 @@ body {
   box-sizing: border-box;
   background: #f3f4f6;
 }
+
+.article-content {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Reset some conflicts with your Tailwind/app styles */
+.article-content * {
+  box-sizing: border-box;
+}
+
+.article-content .main-layout {
+  margin: 36px auto;
+  padding: 0 24px;
+  max-width: 1100px;
+}
+
+/* Ensure modals work on top of everything */
+.article-content .modal-overlay {
+  z-index: 9999 !important;
+}
+
+/* Make sure videos, images, iframes are responsive */
+.article-content img,
+.article-content video,
+.article-content iframe {
+  max-width: 100%;
+  height: auto;
+}
