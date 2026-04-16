@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article>
+    <title>Online Education Platform Demo</title>
+
+    <section id="1">
+        <paragraph>
+            Online education platforms often include
+            <bold>interactive media</bold>
+            and
+            <italic>rich learning resources</italic>.
+        </paragraph>
+
+        <image>
+            <url>https://multimedia-app-4cw7.onrender.com/images/69e05bdfc4002edfe8484133</url>
+            <caption>Course banner image</caption>
+            <alt>Educational banner image</alt>
+        </image>
+
+        <paragraph>
+            Students can read lessons, view images, and follow linked resources.
+        </paragraph>
+    </section>
+
+    <section id="2">
+        <paragraph>
+            Video lectures are an important part of e-learning systems.
+        </paragraph>
+
+        <video>
+            <url>https://multimedia-app-4cw7.onrender.com/videos/69e05c8cc4002edfe848414b</url>
+            <caption>Recorded lecture video</caption>
+        </video>
+
+        <audio>
+            <url>https://multimedia-app-4cw7.onrender.com/audio/69e05de3c4002edfe8484156</url>
+            <caption>Lecture audio recording</caption>
+        </audio>
+
+        <explanation>
+            Combining audio, video, and text gives learners multiple ways to understand the same topic.
+        </explanation>
+    </section>
+
+    <section id="3">
+        <youtube>
+            <url>https://www.youtube.com/watch?v=4vQ9QkRLKd0</url>
+            <title>Online Learning Tutorial</title>
+        </youtube>
+
+        <website>
+            <url>https://multimedia-app-4cw7.onrender.com</url>
+            <title>Education Media Server</title>
+        </website>
+
+        <paragraph>
+            This platform supports <bold>media embedding</bold>,
+            <italic>external resources</italic>, and
+            <link url="https://www.youtube.com/watch?v=4vQ9QkRLKd0">YouTube video links</link>.
+        </paragraph>
+    </section>
+</article>

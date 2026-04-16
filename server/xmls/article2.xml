@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article>
+    <title>Learning About Nature</title>
+
+    <section id="1">
+        <paragraph>
+            Nature contains many
+            <bold>beautiful landscapes</bold>
+            and
+            <italic>diverse ecosystems</italic>.
+        </paragraph>
+
+        <image>
+            <url>https://multimedia-app-4cw7.onrender.com/images/69e05beec4002edfe8484137</url>
+            <caption>Nature image example</caption>
+            <alt>Landscape demo image</alt>
+        </image>
+
+        <image>
+            <url>https://multimedia-app-4cw7.onrender.com/images/69e05bf4c4002edfe8484139</url>
+            <caption>Forest or wildlife image example</caption>
+            <alt>Wildlife demo image</alt>
+        </image>
+
+        <paragraph>
+            Many students learn better when images are combined with audio and video materials.
+        </paragraph>
+    </section>
+
+    <section id="2">
+        <paragraph>
+            Videos can explain natural events such as rain, rivers, and forests.
+        </paragraph>
+
+        <video>
+            <url>https://multimedia-app-4cw7.onrender.com/videos/69e05c7ac4002edfe848413b</url>
+            <caption>Nature documentary sample video</caption>
+        </video>
+
+        <audio>
+            <url>https://multimedia-app-4cw7.onrender.com/audio/69e05ddcc4002edfe8484152</url>
+            <caption>Nature sound recording</caption>
+        </audio>
+
+        <explanation>
+            Multimedia helps make educational content more engaging and easier to understand.
+        </explanation>
+    </section>
+
+    <section id="3">
+        <youtube>
+            <url>https://www.youtube.com/watch?v=4vQ9QkRLKd0</url>
+            <title>Nature and Environment Video</title>
+        </youtube>
+
+        <website>
+            <url>https://multimedia-app-4cw7.onrender.com</url>
+            <title>Local Multimedia Server</title>
+        </website>
+
+        <paragraph>
+            Visit the
+            <link url="https://multimedia-app-4cw7.onrender.com">multimedia server</link>
+            to access all stored files.
+        </paragraph>
+    </section>
+</article>

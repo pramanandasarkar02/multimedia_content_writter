@@ -504,12 +504,12 @@ def xml_to_html(xml_string):
     return full_html
 
 
-with open("demo.xml", "r", encoding="utf-8") as file:
+with open("xmls/article3.xml", "r", encoding="utf-8") as file:
     xml_data = file.read()
 
 html_output = xml_to_html(xml_data)
 
-with open("index.html", "w", encoding="utf-8") as file:
+with open("article3.html", "w", encoding="utf-8") as file:
     file.write(html_output)
 
-print("index.html generated successfully")
+print("article3.html generated successfully")
