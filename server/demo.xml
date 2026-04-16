@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article>
+    <title>Introduction to Artificial Intelligence</title>
+
+    <section id="1">
+        <paragraph>
+            Artificial Intelligence is a
+            <bold>powerful</bold> and
+            <italic>rapidly growing</italic> field of computer science.
+        </paragraph>
+
+        <paragraph>
+            AI is used in healthcare, education, robotics, and many other industries.
+        </paragraph>
+
+        <image>
+            <url>https://example.com/images/ai-overview.jpg</url>
+            <caption>Overview of Artificial Intelligence</caption>
+            <alt>Artificial Intelligence Illustration</alt>
+        </image>
+    </section>
+
+    <section id="2">
+        <paragraph>
+            Machine Learning is a subset of
+            <bold>Artificial Intelligence</bold>.
+        </paragraph>
+
+        <explanation>
+            Machine Learning allows systems to learn from data without being explicitly programmed.
+        </explanation>
+
+        <video>
+            <url>https://example.com/videos/machine-learning.mp4</url>
+            <caption>Machine Learning Introduction Video</caption>
+        </video>
+
+        <audio>
+            <url>https://example.com/audio/ml-explanation.mp3</url>
+            <caption>Audio explanation of Machine Learning</caption>
+        </audio>
+    </section>
+
+    <section id="3">
+        <paragraph>
+            You can learn more from the following resources:
+        </paragraph>
+
+        <youtube>
+            <url>https://www.youtube.com/watch?v=example123</url>
+            <title>AI Full Course</title>
+        </youtube>
+
+        <website>
+            <url>https://openai.com</url>
+            <title>OpenAI Official Website</title>
+        </website>
+
+        <paragraph>
+            This is an example of a <bold>bold text</bold>, an
+            <italic>italic text</italic>, and a
+            <link url="https://example.com">clickable text link</link> inside a paragraph.
+        </paragraph>
+    </section>
+</article>
