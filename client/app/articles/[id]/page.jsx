@@ -25,7 +25,7 @@ export default async function SingleArticlePage({ params }) {
         <Link href="/articles/view" className="text-blue-500 hover:underline mb-5">
           ← Back to Articles
         </Link>
-        <h1 className="text-red-600 text-md font-bold">
+        <h1 className="text-red-600 text-xl font-bold">
   if the link doesn't work, refresh browser ;)
 </h1>
         <div
