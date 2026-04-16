@@ -25,8 +25,8 @@ export default async function SingleArticlePage({ params }) {
         <Link href="/articles/view" className="text-blue-500 hover:underline mb-5">
           ← Back to Articles
         </Link>
-        <h1 className="text-red-600 text-2xl font-bold">
-  Wait sometimes if the link doesn't work, let it be downloaded from a free server ;)
+        <h1 className="text-red-600 text-md font-bold">
+  if the link doesn't work, refresh browser ;)
 </h1>
         <div
           className="mt-8 prose max-w-none"
