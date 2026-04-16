@@ -22,9 +22,12 @@ export default async function SingleArticlePage({ params }) {
   <div className="min-h-screen flex justify-center px-4 py-10">
     <div className="w-full max-w-4xl">
       <div className="bg-white p-8 rounded-2xl shadow">
-        <Link href="/articles/view" className="text-blue-500 hover:underline">
+        <Link href="/articles/view" className="text-blue-500 hover:underline mb-5">
           ← Back to Articles
         </Link>
+        <h1 className="text-red-600 text-2xl font-bold">
+  Wait sometimes if the link doesn't work, let it be downloaded from a free server ;)
+</h1>
         <div
           className="mt-8 prose max-w-none"
           dangerouslySetInnerHTML={{ __html: article.content }}
